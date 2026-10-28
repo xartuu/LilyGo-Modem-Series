@@ -1,0 +1,9 @@
+2022-10-14 14:59:15,001 DEBUG    [FlashTop]    lib svn rev: LIB_SVN_REVISION:  00000152,build time-2021-12-10 18:41:31
+2022-10-14 14:59:15,002 INFO     [FlashTop]    init
+2022-10-14 14:59:15,005 [Process-4196] INFO     [FlashTop]    do_main: cmd loadpara
+2022-10-14 14:59:15,007 [Process-4196] INFO     [Para]    LoadPara from cfgfile(D:\work\≤‚ ‘»Ìº˛\“∆–æE7025\DL-yx\X7630C\MultiDownload\Release\X7630C MEDL(Factory) V1.03_MES\config_usb1.ini) 
+2022-10-14 14:59:15,010 [Process-4196] INFO     [FlashTop]    Load para sync success
+2022-10-14 14:59:15,011 [Process-4196] INFO     [FlashTop]    do_main: cmd pkg2img
+2022-10-14 14:59:15,042 [Process-4196] INFO     [PkgVerCtrl]    PkgImgTgtLocalChk finish
+2022-10-14 14:59:15,042 [Process-4196] INFO     [PkgVerCtrl]    PkgExtract skip, not needed
+2022-10-14 14:59:15,042 [Process-4196] INFO     [FlashTop]    pkg2img success

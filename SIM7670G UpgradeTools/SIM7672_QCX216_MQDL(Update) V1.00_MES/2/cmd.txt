@@ -1,0 +1,3 @@
+FlashToolCLI.exe --cfgfile config1.ini --port="COM36" flasherase 0x0 0x400000
+FlashToolCLI.exe --skipconnect 1 --cfgfile config1.ini burnbatch --imglist bootloader system flexfile0 flexfile1
+FlashToolCLI.exe --skipconnect 1 --cfgfile config1.ini --port COM36 sysreset

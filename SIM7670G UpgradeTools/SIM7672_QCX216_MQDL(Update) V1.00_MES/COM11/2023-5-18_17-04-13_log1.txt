@@ -1,0 +1,37 @@
+Microsoft Windows XP [版本 6.2.9200]
+(C) 版权所有 1985-2001 Microsoft Corp.
+
+D:\work\测试软件\移芯E7025\DL-yx\X7630C\MultiDownload\Release\SIM7672_QCX216_MQDL(Update) V1.00_MES\1>FlashToolCLI1.exe --cfgfile config_usb1.ini pkg2img
+2023-05-18 17:04:19,690 DEBUG    [FlashTop]    lib svn rev: LIB_SVN_REVISION:  00000152,build time-2021-12-10 18:41:31
+2023-05-18 17:04:19,704 INFO     [FlashTop]    init
+[Process-32652] [FlashTop]    do_main: cmd loadpara
+[Process-32652] [Para]    LoadPara from cfgfile(D:\work\测试软件\移芯E7025\DL-yx\X7630C\MultiDownload\Release\SIM7672_QCX216_MQDL(Update) V1.00_MES\1\config_usb1.ini) 
+[Process-32652] [Para]    invalid config, filepath:, burnaddr 0xe7000
+[Process-32652] [Para]    invalid config, filepath:, burnaddr 0xce000
+[Process-32652] [FlashTop]    Load para sync success
+[Process-32652] [FlashTop]    do_main: cmd pkg2img
+[Process-32652] [PkgVerCtrl]    PkgExtractNeeded True
+[Process-32652] [PkgVerCtrl]    PkgLoadPrimInfo entry, chk info path D:\Firmware\移芯\2308B01V01SIM7672M5A_SIM7672E-MNGV_V101230109\2308B01SIM7672M5A_SIM7672E-MNGV_V101230109\imagedata.json 
+[Process-32652] [PkgVerCtrl]    PkgImgTgtLocalChk finish
+[Process-32652] [PkgVerCtrl]    PkgExtract finish
+[Process-32652] [FlashTop]    pkg2img success
+
+D:\work\测试软件\移芯E7025\DL-yx\X7630C\MultiDownload\Release\SIM7672_QCX216_MQDL(Update) V1.00_MES\1>FlashToolCLI1.exe --cfgfile config_usb1.ini  --port="COM11" probe
+2023-05-18 17:04:24,918 DEBUG    [FlashTop]    lib svn rev: LIB_SVN_REVISION:  00000152,build time-2021-12-10 18:41:31
+2023-05-18 17:04:24,918 INFO     [FlashTop]    init
+[Process-32444] [FlashTop]    do_main: cmd loadpara
+[Process-32444] [Para]    Log para no need
+[Process-32444] [FlashTop]    Load para sync success
+[Process-32444] [FlashTop]    do_main: cmd burnag, Thread0[32500]
+[Process-32444] [Thread0]    ProcessStart[32500]
+[Process-32444] [Thread0]    DtrConditionAssign  0
+[Process-32444] [Thread0]    RtsConditionAssign  0
+[Process-32444] [Thread0]    
+ A fatal error occurred: could not open port 'COM11': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+[Process-32444] [Thread0]    Burn Failed(0x1010)
+[Process-32444] [FlashTop]    burn failed, ret=0x00001010, Thread0[32500]
+[Process-32444] [Thread0]    ProcessEnd[32500]
+[Process-32444] [FlashToolCLI]    
+[Error Info]:[com open fail] 
+
+D:\work\测试软件\移芯E7025\DL-yx\X7630C\MultiDownload\Release\SIM7672_QCX216_MQDL(Update) V1.00_MES\1>

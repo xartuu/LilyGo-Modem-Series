@@ -1,0 +1,422 @@
+Microsoft Windows XP [°æ±¾ 6.2.9200]
+(C) °æÈ¨ËùÓÐ 1985-2001 Microsoft Corp.
+
+D:\work\²âÊÔÈí¼þ\ÒÆÐ¾E7025\DL-yx\X7630C\MultiDownload\Release\SIM7672_QCX216_MQDL(Update) V1.00_MES\1>FlashToolCLI1.exe --cfgfile config_usb1.ini pkg2img
+2023-05-18 17:04:38,648 DEBUG    [FlashTop]    lib svn rev: LIB_SVN_REVISION:  00000152,build time-2021-12-10 18:41:31
+2023-05-18 17:04:38,649 INFO     [FlashTop]    init
+[Process-29004] [FlashTop]    do_main: cmd loadpara
+[Process-29004] [Para]    Log para no need
+[Process-29004] [FlashTop]    Load para sync success
+[Process-29004] [FlashTop]    do_main: cmd pkg2img
+[Process-29004] [PkgVerCtrl]    PkgImgTgtLocalChk finish
+[Process-29004] [PkgVerCtrl]    PkgExtract skip, not needed
+[Process-29004] [FlashTop]    pkg2img success
+
+D:\work\²âÊÔÈí¼þ\ÒÆÐ¾E7025\DL-yx\X7630C\MultiDownload\Release\SIM7672_QCX216_MQDL(Update) V1.00_MES\1>FlashToolCLI1.exe --cfgfile config_usb1.ini  --port="COM11" probe
+2023-05-18 17:04:42,642 DEBUG    [FlashTop]    lib svn rev: LIB_SVN_REVISION:  00000152,build time-2021-12-10 18:41:31
+2023-05-18 17:04:42,643 INFO     [FlashTop]    init
+[Process-16912] [FlashTop]    do_main: cmd loadpara
+[Process-16912] [Para]    Log para no need
+[Process-16912] [FlashTop]    Load para sync success
+[Process-16912] [FlashTop]    do_main: cmd burnag, Thread0[31916]
+[Process-16912] [Thread0]    ProcessStart[31916]
+[Process-16912] [Thread0]    DtrConditionAssign  0
+[Process-16912] [Thread0]    RtsConditionAssign  0
+[Process-16912] [Thread0]    DtrConditionAssign  1
+[Process-16912] [Thread0]    RtsConditionAssign  1
+[Process-16912] [Thread0]    DtrConditionAssign  0
+[Process-16912] [Thread0]    RtsConditionAssign  0
+[Process-16912] [Thread0]    ResetBoard(Normal Mod) finish
+[Process-16912] [Thread0]    DtrConditionAssign  0
+[Process-16912] [Thread0]    RtsConditionAssign  0
+[Process-16912] [Thread0]    DtrConditionAssign  0
+[Process-16912] [Thread0]    RtsConditionAssign  0
+[Process-16912] [Image]    pullup_qspi 1
+[Process-16912] [Image]    SetBaud 921600
+[Process-16912] [Image]    Update Image Head Hash  b'\x17\xdb\xdc\xc0\x5c\x62\xc3\xc4\xc6\x47\x84\x72\xac\xa5\x5d\xdd\x36\x5d\x8d\x41\x4f\x49\x58\xe2\x31\xbc\x30\x8e\x84\x3a\xce\x0c'
+[Process-16912] [Thread0]    TryDownload D:\work\²âÊÔÈí¼þ\ÒÆÐ¾E7025\DL-yx\X7630C\MultiDownload\Release\SIM7672_QCX216_MQDL(Update) V1.00_MES\1\image_qcx216\agentboot_usb\agentboot.bin start
+[Process-16912] [Thread0]    image size=35936, hdsize=272
+[Process-16912] [Thread0]    Preamble Send
+[Process-16912] [Thread0]    Preamble Received Rsp
+[Process-16912] [Thread0]    Preamble Send
+[Process-16912] [Thread0]    Preamble Received Rsp
+[Process-16912] [Thread0]    TryDownload agentboot success
+[Process-16912] [Thread0]    DtrConditionAssign  0
+[Process-16912] [Thread0]    RtsConditionAssign  0
+[Process-16912] [Thread0]    agbaud: 921600
+[Process-16912] [Thread0]    Burn OK!
+[Process-16912] [Thread0]    ProcessEnd[31916]
+
+D:\work\²âÊÔÈí¼þ\ÒÆÐ¾E7025\DL-yx\X7630C\MultiDownload\Release\SIM7672_QCX216_MQDL(Update) V1.00_MES\1>FlashToolCLI1.exe  --skipconnect 1 --cfgfile config_usb1.ini burnbatch --imglist bootloader system cp_system
+2023-05-18 17:04:46,617 DEBUG    [FlashTop]    lib svn rev: LIB_SVN_REVISION:  00000152,build time-2021-12-10 18:41:31
+2023-05-18 17:04:46,617 INFO     [FlashTop]    init
+[Process-32724] [FlashTop]    do_main: cmd loadpara
+[Process-32724] [Para]    Log para no need
+[Process-32724] [FlashTop]    Load para sync success
+[Process-32724] [FlashToolCLI]    Burnbatch Start, burn imglist ['bootloader', 'system', 'cp_system'].
+[Process-32724] [FlashTop]    do_main: cmd burnag, Thread0[12928]
+[Process-32724] [Thread0]    ProcessStart[12928]
+[Process-32724] [Thread0]    DtrConditionAssign  0
+[Process-32724] [Thread0]    RtsConditionAssign  0
+[Process-32724] [Thread0]    DtrConditionAssign  1
+[Process-32724] [Thread0]    RtsConditionAssign  1
+[Process-32724] [Thread0]    DtrConditionAssign  0
+[Process-32724] [Thread0]    RtsConditionAssign  0
+[Process-32724] [Thread0]    ResetBoard(Normal Mod) finish
+[Process-32724] [Thread0]    DtrConditionAssign  0
+[Process-32724] [Thread0]    RtsConditionAssign  0
+[Process-32724] [Thread0]    DtrConditionAssign  0
+[Process-32724] [Thread0]    RtsConditionAssign  0
+[Process-32724] [Thread0]    TryDownload agentboot skip
+[Process-32724] [Thread0]    Burn OK!
+[Process-32724] [Thread0]    ProcessEnd[12928]
+[Process-32724] [FlashTop]    do_main: cmd burnone, Thread0[12928]
+[Process-32724] [Thread0]    ProcessStart[12928]
+[Process-32724] [Thread0]    ResetBoard skip for straight download
+[Process-32724] [Thread0]    DtrConditionAssign  0
+[Process-32724] [Thread0]    RtsConditionAssign  0
+[Process-32724] [Thread0]    TryDownload agentboot skip
+[Process-32724] [Thread0]    DtrConditionAssign  0
+[Process-32724] [Thread0]    RtsConditionAssign  0
+[Process-32724] [Thread0]    agbaud: 921600
+[Process-32724] [Thread0]    LPCSyncDetect try recovery
+[Process-32724] [Thread0]    LPC Preamble Send
+[Process-32724] [Thread0]    LPC Preamble Received Rsp
+[Process-32724] [Thread0]    LPCSetSyncStat(1)
+[Process-32724] [Thread0]    LPCSyncDetect: success
+[Process-32724] [Thread0]    DownloadBurnOne imgtype(bootloader)
+[Process-32724] [Thread0]    DownloadBurnOne imgtype(bootloader), burnaddr(0x0), imgid(0x4f424d49)
+[Process-32724] [Thread0]    DownloadBurnOne file D:\work\²âÊÔÈí¼þ\ÒÆÐ¾E7025\DL-yx\X7630C\MultiDownload\Release\SIM7672_QCX216_MQDL(Update) V1.00_MES\1\image_qcx216\ap_bootloader.bin 
+[Process-32724] [Image]    UpdateDribbleCfg before burnaddr config
+[Process-32724] [Image]    Update Image Body Hash  b'\x92\x69\xe1\x6b\xa4\x43\xf2\x3b\xe0\x42\xda\x08\x7e\xd6\x91\x06\x8a\x01\xd3\xe9\x2f\xec\x05\xef\xa8\xaa\xd3\xbd\x01\x18\xa3\x35'
+[Process-32724] [Image]    Update Image Head Hash  b'\x68\x37\x4d\x78\xdc\xc6\x1b\xa2\x1b\x20\x45\x1b\xa3\x8f\x79\x3e\xbf\xcd\x7c\x74\x7e\x32\xcf\x5c\x19\x7f\x09\x8a\xdd\x73\x31\x4b'
+[Process-32724] [Thread0]    TryDownload D:\work\²âÊÔÈí¼þ\ÒÆÐ¾E7025\DL-yx\X7630C\MultiDownload\Release\SIM7672_QCX216_MQDL(Update) V1.00_MES\1\image_qcx216\ap_bootloader.bin start
+[Process-32724] [Thread0]    LPCBurnOneTrig start       			******
+[Process-32724] [Thread0]    LPCBurnOneTrig success
+[Process-32724] [Thread0]    DLDPreSync Preamble Send
+[Process-32724] [Thread0]    DLDPreSync Preamble Received Rsp
+[Process-32724] [Thread0]    image size=103586, hdsize=272
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    imginfo.size=103586, RemainLen=103586, Offset=0
+[Process-32724] [Thread0]    {ap_bootloader.bin-percent files transferred   0%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=103586, RemainLen=103314, Offset=272
+[Process-32724] [Thread0]    {ap_bootloader.bin-percent files transferred   0%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=103586, RemainLen=37778, Offset=65808
+[Process-32724] [Thread0]    {ap_bootloader.bin-percent files transferred   63%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=103586, RemainLen=0, Offset=65808
+[Process-32724] [Thread0]    {ap_bootloader.bin-percent files transferred   100%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    TryDownload success
+[Process-32724] [Thread0]    Burn OK!
+[Process-32724] [Thread0]    ProcessEnd[12928]
+[Process-32724] [FlashTop]    do_main: cmd burnone, Thread0[12928]
+[Process-32724] [Thread0]    ProcessStart[12928]
+[Process-32724] [Thread0]    ResetBoard skip for straight download
+[Process-32724] [Thread0]    DtrConditionAssign  0
+[Process-32724] [Thread0]    RtsConditionAssign  0
+[Process-32724] [Thread0]    agentboot is downloaded already
+[Process-32724] [Thread0]    TryDownload agentboot skip
+[Process-32724] [Thread0]    DtrConditionAssign  0
+[Process-32724] [Thread0]    RtsConditionAssign  0
+[Process-32724] [Thread0]    agbaud: 921600
+[Process-32724] [Thread0]    LPC Preamble Send
+[Process-32724] [Thread0]    LPC Preamble Received Rsp
+[Process-32724] [Thread0]    LPCSyncDetect: success
+[Process-32724] [Thread0]    DownloadBurnOne imgtype(system)
+[Process-32724] [Thread0]    DownloadBurnOne imgtype(system), burnaddr(0x24000), imgid(0x444b4249)
+[Process-32724] [Thread0]    DownloadBurnOne file D:\work\²âÊÔÈí¼þ\ÒÆÐ¾E7025\DL-yx\X7630C\MultiDownload\Release\SIM7672_QCX216_MQDL(Update) V1.00_MES\1\image_qcx216\ap_demo-flash.bin 
+[Process-32724] [Image]    Update Image Body Hash  b'\x08\x50\xc7\xf6\xab\x9c\xd1\x45\x64\x4a\x40\xd0\x70\x63\xfc\xbe\xe4\x67\x9f\x01\x21\x60\x03\x5a\xe9\x3a\xdc\x9b\x0e\xfb\xad\x10'
+[Process-32724] [Image]    Update Image Head Hash  b'\x75\xde\x09\xc5\xe4\x46\x72\x48\xa9\xc8\x47\x14\x15\x54\xa5\x92\xdb\x72\x65\x62\xe4\x34\x85\x82\x48\x38\x5e\x5f\xa0\xc1\x70\x1f'
+[Process-32724] [Thread0]    TryDownload D:\work\²âÊÔÈí¼þ\ÒÆÐ¾E7025\DL-yx\X7630C\MultiDownload\Release\SIM7672_QCX216_MQDL(Update) V1.00_MES\1\image_qcx216\ap_demo-flash.bin start
+[Process-32724] [Thread0]    LPCBurnOneTrig start       			******
+[Process-32724] [Thread0]    LPCBurnOneTrig success
+[Process-32724] [Thread0]    DLDPreSync Preamble Send
+[Process-32724] [Thread0]    DLDPreSync Preamble Received Rsp
+[Process-32724] [Thread0]    image size=2440500, hdsize=272
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=2440500, Offset=0
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   0%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=2440228, Offset=272
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   0%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=2374692, Offset=65808
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   2%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=2309156, Offset=131344
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   5%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=2243620, Offset=196880
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   8%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=2178084, Offset=262416
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   10%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=2112548, Offset=327952
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   13%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=2047012, Offset=393488
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   16%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=1981476, Offset=459024
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   18%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=1915940, Offset=524560
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   21%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=1850404, Offset=590096
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   24%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=1784868, Offset=655632
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   26%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=1719332, Offset=721168
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   29%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=1653796, Offset=786704
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   32%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=1588260, Offset=852240
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   34%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=1522724, Offset=917776
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   37%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=1457188, Offset=983312
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   40%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=1391652, Offset=1048848
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   42%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=1326116, Offset=1114384
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   45%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=1260580, Offset=1179920
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   48%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=1195044, Offset=1245456
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   51%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=1129508, Offset=1310992
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   53%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=1063972, Offset=1376528
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   56%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=998436, Offset=1442064
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   59%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=932900, Offset=1507600
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   61%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=867364, Offset=1573136
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   64%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=801828, Offset=1638672
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   67%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=736292, Offset=1704208
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   69%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=670756, Offset=1769744
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   72%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=605220, Offset=1835280
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   75%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=539684, Offset=1900816
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   77%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=474148, Offset=1966352
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   80%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=408612, Offset=2031888
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   83%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=343076, Offset=2097424
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   85%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=277540, Offset=2162960
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   88%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=212004, Offset=2228496
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   91%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=146468, Offset=2294032
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   93%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=80932, Offset=2359568
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   96%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=15396, Offset=2425104
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   99%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=2440500, RemainLen=0, Offset=2425104
+[Process-32724] [Thread0]    {ap_demo-flash.bin-percent files transferred   100%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    TryDownload success
+[Process-32724] [Thread0]    Burn OK!
+[Process-32724] [Thread0]    ProcessEnd[12928]
+[Process-32724] [FlashTop]    do_main: cmd burnone, Thread0[12928]
+[Process-32724] [Thread0]    ProcessStart[12928]
+[Process-32724] [Thread0]    ResetBoard skip for straight download
+[Process-32724] [Thread0]    DtrConditionAssign  0
+[Process-32724] [Thread0]    RtsConditionAssign  0
+[Process-32724] [Thread0]    agentboot is downloaded already
+[Process-32724] [Thread0]    TryDownload agentboot skip
+[Process-32724] [Thread0]    DtrConditionAssign  0
+[Process-32724] [Thread0]    RtsConditionAssign  0
+[Process-32724] [Thread0]    agbaud: 921600
+[Process-32724] [Thread0]    LPC Preamble Send
+[Process-32724] [Thread0]    LPC Preamble Received Rsp
+[Process-32724] [Thread0]    LPCSyncDetect: success
+[Process-32724] [Thread0]    DownloadBurnOne imgtype(cp_system)
+[Process-32724] [Thread0]    DownloadBurnOne imgtype(cp_system), burnaddr(0x0), imgid(0x43504249)
+[Process-32724] [Thread0]    DownloadBurnOne file D:\work\²âÊÔÈí¼þ\ÒÆÐ¾E7025\DL-yx\X7630C\MultiDownload\Release\SIM7672_QCX216_MQDL(Update) V1.00_MES\1\image_qcx216\cp-demo-flash.bin 
+[Process-32724] [Image]    UpdateDribbleCfg before burnaddr config
+[Process-32724] [Image]    Update Image Body Hash  b'\x3f\xfc\x68\xd9\x4b\xaf\x41\x7a\xac\x9f\x00\x10\x68\x7f\xc7\x80\xa9\xe9\x74\x7e\xb6\x44\x28\xca\xab\x88\xfb\xe9\x3d\x55\xc3\x93'
+[Process-32724] [Image]    Update Image Head Hash  b'\x87\xab\x4b\x63\x8f\x08\xd2\x68\x7a\x8f\xec\x24\xc9\x92\xe9\x9b\x72\xc8\x68\x4c\x75\x0e\xa0\x25\x8b\x2d\x99\x68\x56\x40\x63\x7c'
+[Process-32724] [Thread0]    TryDownload D:\work\²âÊÔÈí¼þ\ÒÆÐ¾E7025\DL-yx\X7630C\MultiDownload\Release\SIM7672_QCX216_MQDL(Update) V1.00_MES\1\image_qcx216\cp-demo-flash.bin start
+[Process-32724] [Thread0]    TryDownload CP Image.
+[Process-32724] [Thread0]    LPCBurnOneTrig(Ext) start       			******
+[Process-32724] [Thread0]    LPCBurnOneTrig success
+[Process-32724] [Thread0]    DLDPreSync Preamble Send
+[Process-32724] [Thread0]    DLDPreSync Preamble Received Rsp
+[Process-32724] [Thread0]    image size=454052, hdsize=272
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    imginfo.size=454052, RemainLen=454052, Offset=0
+[Process-32724] [Thread0]    {cp-demo-flash.bin-percent files transferred   0%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=454052, RemainLen=453780, Offset=272
+[Process-32724] [Thread0]    {cp-demo-flash.bin-percent files transferred   0%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=454052, RemainLen=388244, Offset=65808
+[Process-32724] [Thread0]    {cp-demo-flash.bin-percent files transferred   14%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=454052, RemainLen=322708, Offset=131344
+[Process-32724] [Thread0]    {cp-demo-flash.bin-percent files transferred   28%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=454052, RemainLen=257172, Offset=196880
+[Process-32724] [Thread0]    {cp-demo-flash.bin-percent files transferred   43%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=454052, RemainLen=191636, Offset=262416
+[Process-32724] [Thread0]    {cp-demo-flash.bin-percent files transferred   57%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=454052, RemainLen=126100, Offset=327952
+[Process-32724] [Thread0]    {cp-demo-flash.bin-percent files transferred   72%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=454052, RemainLen=60564, Offset=393488
+[Process-32724] [Thread0]    {cp-demo-flash.bin-percent files transferred   86%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    Preamble Send
+[Process-32724] [Thread0]    Preamble Received Rsp
+[Process-32724] [Thread0]    imginfo.size=454052, RemainLen=0, Offset=393488
+[Process-32724] [Thread0]    {cp-demo-flash.bin-percent files transferred   100%}
+[Process-32724] [Thread0]    
+[Process-32724] [Thread0]    TryDownload success
+[Process-32724] [Thread0]    Burn OK!
+[Process-32724] [Thread0]    ProcessEnd[12928]
+[Process-32724] [FlashToolCLI]    Burnbatch OK, imglist ['bootloader', 'system', 'cp_system']
+
+D:\work\²âÊÔÈí¼þ\ÒÆÐ¾E7025\DL-yx\X7630C\MultiDownload\Release\SIM7672_QCX216_MQDL(Update) V1.00_MES\1>

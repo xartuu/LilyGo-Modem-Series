@@ -1,0 +1,64 @@
+{
+    "Columns":[
+        {
+            "Name":"Length",
+            "Index":"5",
+            "Width":"58"
+        },
+        {
+            "Name":"UE Time",
+            "Index":"6",
+            "Width":"156"
+        },
+        {
+            "Name":"SubName",
+            "Index":"2",
+            "Width":"164"
+        },
+        {
+            "Name":"ModuleName",
+            "Index":"1",
+            "Width":"124"
+        },
+        {
+            "Name":"SFN",
+            "Index":"-1",
+            "Width":"0"
+        },
+        {
+            "Name":"Debug Level",
+            "Index":"7",
+            "Width":"75"
+        },
+        {
+            "Name":"Hex",
+            "Index":"4",
+            "Width":"75"
+        },
+        {
+            "Name":"PC Time",
+            "Index":"8",
+            "Width":"200"
+        },
+        {
+            "Name":"Message",
+            "Index":"3",
+            "Width":"438"
+        },
+        {
+            "Name":"Device",
+            "Index":"-1",
+            "Width":"0"
+        },
+        {
+            "Name":"OwnerName",
+            "Index":"-1",
+            "Width":"0"
+        },
+        {
+            "Name":"Index",
+            "Index":"0",
+            "Width":"84"
+        }
+    ]
+}

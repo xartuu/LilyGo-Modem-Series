@@ -1,0 +1,55 @@
+Microsoft Windows XP [°æ±¾ 6.2.9200]
+(C) °æÈ¨ËùÓÐ 1985-2001 Microsoft Corp.
+
+D:\work\²âÊÔÈí¼þ\ÒÆÐ¾E7025\DL-yx\X7630C\MultiDownload\Release\SIM7672_QCX216_MQDL(Update) V1.00_MES\1>FlashToolCLI1.exe --cfgfile config_usb1.ini pkg2img
+2023-05-18 17:07:04,767 DEBUG    [FlashTop]    lib svn rev: LIB_SVN_REVISION:  00000152,build time-2021-12-10 18:41:31
+2023-05-18 17:07:04,767 INFO     [FlashTop]    init
+[Process-28980] [FlashTop]    do_main: cmd loadpara
+[Process-28980] [Para]    Log para need
+[Process-28980] [Para]    LoadPara from cfgfile(D:\work\²âÊÔÈí¼þ\ÒÆÐ¾E7025\DL-yx\X7630C\MultiDownload\Release\SIM7672_QCX216_MQDL(Update) V1.00_MES\1\config_usb1.ini) 
+[Process-28980] [Para]    invalid config, filepath:, burnaddr 0xe7000
+[Process-28980] [Para]    invalid config, filepath:, burnaddr 0xce000
+[Process-28980] [FlashTop]    Load para sync success
+[Process-28980] [FlashTop]    do_main: cmd pkg2img
+[Process-28980] [PkgVerCtrl]    PkgImgTgtLocalChk finish
+[Process-28980] [PkgVerCtrl]    PkgExtract skip, not needed
+[Process-28980] [FlashTop]    pkg2img success
+
+D:\work\²âÊÔÈí¼þ\ÒÆÐ¾E7025\DL-yx\X7630C\MultiDownload\Release\SIM7672_QCX216_MQDL(Update) V1.00_MES\1>FlashToolCLI1.exe --cfgfile config_usb1.ini  --port="COM11" probe
+2023-05-18 17:07:08,691 DEBUG    [FlashTop]    lib svn rev: LIB_SVN_REVISION:  00000152,build time-2021-12-10 18:41:31
+2023-05-18 17:07:08,692 INFO     [FlashTop]    init
+[Process-30680] [FlashTop]    do_main: cmd loadpara
+[Process-30680] [Para]    Log para no need
+[Process-30680] [FlashTop]    Load para sync success
+[Process-30680] [FlashTop]    do_main: cmd burnag, Thread0[32752]
+[Process-30680] [Thread0]    ProcessStart[32752]
+[Process-30680] [Thread0]    DtrConditionAssign  0
+[Process-30680] [Thread0]    RtsConditionAssign  0
+[Process-30680] [Thread0]    DtrConditionAssign  1
+[Process-30680] [Thread0]    RtsConditionAssign  1
+[Process-30680] [Thread0]    DtrConditionAssign  0
+[Process-30680] [Thread0]    RtsConditionAssign  0
+[Process-30680] [Thread0]    ResetBoard(Normal Mod) finish
+[Process-30680] [Thread0]    DtrConditionAssign  0
+[Process-30680] [Thread0]    RtsConditionAssign  0
+[Process-30680] [Thread0]    DtrConditionAssign  0
+[Process-30680] [Thread0]    RtsConditionAssign  0
+[Process-30680] [Image]    pullup_qspi 1
+[Process-30680] [Image]    SetBaud 921600
+[Process-30680] [Image]    Update Image Head Hash  b'\x17\xdb\xdc\xc0\x5c\x62\xc3\xc4\xc6\x47\x84\x72\xac\xa5\x5d\xdd\x36\x5d\x8d\x41\x4f\x49\x58\xe2\x31\xbc\x30\x8e\x84\x3a\xce\x0c'
+[Process-30680] [Thread0]    TryDownload D:\work\²âÊÔÈí¼þ\ÒÆÐ¾E7025\DL-yx\X7630C\MultiDownload\Release\SIM7672_QCX216_MQDL(Update) V1.00_MES\1\image_qcx216\agentboot_usb\agentboot.bin start
+[Process-30680] [Thread0]    image size=35936, hdsize=272
+[Process-30680] [Thread0]    Preamble Send
+[Process-30680] [Thread0]    Preamble Received Rsp
+[Process-30680] [Thread0]    GlobalReset
+[Process-30680] [Thread0]    Peamble Sync break
+[Process-30680] [Thread0]    Download->DLDIdleProcess failed, ImageId=0x54494d48, ret=0x99
+[Process-30680] [Thread0]    TryDownload failed(0x99)
+[Process-30680] [Thread0]    DownloadAgent failed(0x99)
+[Process-30680] [Thread0]    LPCTryRecover not allow
+[Process-30680] [FlashTop]    burn failed, ret=0x00000099, Thread0[32752]
+[Process-30680] [Thread0]    ProcessEnd[32752]
+[Process-30680] [FlashToolCLI]    
+[Error Info]:[download break] 
+
+D:\work\²âÊÔÈí¼þ\ÒÆÐ¾E7025\DL-yx\X7630C\MultiDownload\Release\SIM7672_QCX216_MQDL(Update) V1.00_MES\1>

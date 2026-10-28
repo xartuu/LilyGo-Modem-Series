@@ -1,0 +1,29 @@
+;This configuration file is generated with T32Start2
+;===================================================
+
+;Environment Variables
+OS=
+ID=T32_1000008
+TMP=C:\windows\Temp
+SYS=C:\T32
+HELP=C:\T32\pdf
+
+; Standard License File used
+
+;T32 API Access
+; not used
+
+;T32 Intercom
+; not used
+
+
+;Connection to Host
+PBI=SIM
+
+;Screen Settings:
+SCREEN=
+FONT=SMALL
+HEADER=Trace32 ARM [SIM @]
+
+;Printer Settings:
+PRINTER=WINDOWS

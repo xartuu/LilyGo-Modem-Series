@@ -1,0 +1,33 @@
+FlashToolCLI.exe --cfgfile config_ec616s.ini flasherase 0x0 0x400000
+FlashToolCLI.exe --cfgfile config_ec616s.ini burnbatch --imglist bootloader system flexfile0 flexfile1
+
+USB DOWNLOAD MODE
+FlashToolCLI.exe --cfgfile config_ec618_usb.ini pkg2img
+step1 connect
+FlashToolCLI.exe --cfgfile config_ec618_usb.ini --port COM46 probe
+
+step2 erase
+FlashToolCLI.exe --skipconnect 1 --cfgfile config_ec618_usb.ini --port COM46 flasherase 0 0x400000
+
+step3 burn
+FlashToolCLI.exe --skipconnect 1 --cfgfile config_ec618_usb.ini --port COM46 burnbatch --imglist bootloader system flexfile0 flexfile1
+FlashToolCLI.exe --skipconnect 1 --cfgfile config_ec618_usb.ini --port COM46 burnbatch --imglist bootloader system 
+step4 reset
+FlashToolCLI.exe --skipconnect 1 --cfgfile config_ec618_usb.ini --port COM40 sysreset
+
+
+UART DOWNLOAD MODE
+
+Normal seperate burn
+step1 connect
+FlashToolCLI.exe --cfgfile config_ec618_uart.ini --port COM40 probe
+
+step2 erase
+FlashToolCLI.exe --skipconnect 1 --cfgfile config_ec618_uart.ini --port COM40 flasherase 0 0x400000
+
+step3 burn
+FlashToolCLI.exe --skipconnect 1 --cfgfile config_ec618_uart.ini --port COM40 burnbatch --imglist bootloader system cp_system
+
+step4 reset
+FlashToolCLI.exe --skipconnect 1 --cfgfile config_ec618_uart.ini --port COM40 sysreset
+

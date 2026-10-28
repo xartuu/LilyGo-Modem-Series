@@ -1,0 +1,270 @@
+; --------------------------------------------------------------------------------
+; @Title: LiteOS specific menu
+; @Description: -
+; @Author: DIE YDA
+; @Copyright: (c) 1989-2022 Lauterbach GmbH, licensed for use with TRACE32(R) only
+; --------------------------------------------------------------------------------
+; $Id: liteos.m 7846 2022-07-28 12:12:59Z amerkle $
+
+NAME "TASK.LITEOS"
+
+IF !MENU.EXIST("TASK.LITEOS")
+(
+add
+menu
+(
+  popup "LiteOS"
+  (
+    default
+    menuitem "[:objects]Display &Tasks"                  "TASK.Task"
+    menuitem "[:objects]Display &Mutex"                  "TASK.MUteX"
+    menuitem "[:objects]Display &Semaphore"              "TASK.SEMaphore"
+    menuitem "[:objects]Display &Queue"                  "TASK.QUEue"
+    menuitem "[:objects]Display &Timer"                  "TASK.TIMer"
+    IF PRACTICE.FUNCtion.AVAILable(SYStem.Option.MACHINESPACES)
+    (
+      IF !SYStem.Option.MACHINESPACES()
+      (
+        MENUITEM "[  X X X X X,XXXXXXXXXXXX, XxxxxxxxxXs,XXxxxxxxxxXs, XxxxxxxxxXX,XXxxxxxxxxXs, XxxxxxxxxXX,XXxxxxSSSSSSSS, XxxxxSBBwwwwwS,XXxxxxSBBwwwXwBS, XXXXXSBBwwwwwBB, XsXsXSBBBBBBBBB,      SBBWWWWWBB,      SBBWWWWWBB,      SBBWRRRWBB,       BBWWWWWBB]Generate RAM Dump"
+        (
+          PRIVATE &sPath
+          &sPath=OS.FILE.JOINPATH(TASK.GETDIR(),"ramdump.cmm")
+          IF OS.FILE("&sPath")
+          (
+            DO "&sPath" /DIALOG
+            ENDDO
+          )
+          PRINT %ERROR "File ""ramdump.cmm"" not found. Please contact support@lauterbach.com ."
+        )
+      )
+    )
+    ELSE
+    (
+      MENUITEM "[  X X X X X,XXXXXXXXXXXX, XxxxxxxxxXs,XXxxxxxxxxXs, XxxxxxxxxXX,XXxxxxxxxxXs, XxxxxxxxxXX,XXxxxxSSSSSSSS, XxxxxSBBwwwwwS,XXxxxxSBBwwwXwBS, XXXXXSBBwwwwwBB, XsXsXSBBBBBBBBB,      SBBWWWWWBB,      SBBWWWWWBB,      SBBWRRRWBB,       BBWWWWWBB]Generate RAM Dump"
+      (
+        PRIVATE &sPath
+        &sPath=OS.FILE.JOINPATH(TASK.GETDIR(),"ramdump.cmm")
+        IF OS.FILE("&sPath")
+        (
+          DO "&sPath" /DIALOG
+          ENDDO
+        )
+        PRINT %ERROR "File ""ramdump.cmm"" not found. Please contact support@lauterbach.com ."
+      )
+    )
+    separator
+    popup "[:coverage]&Stack Coverage"
+    (
+      menuitem "[:objects]&List Stacks"                  "TASK.STacK.view"
+      menuitem "[:plus]Add Task"                         "TASK.STacK.ADD"
+      menuitem "[:exit]Remove Task"                      "TASK.STacK.RM"
+      menuitem "Reset Coverage"
+      (
+        if icd()||simulator()
+        (
+          PRIVATE &yes
+          dialog.yesno "Overwrite unused stack space" "with stack fill pattern?"
+          entry &yes
+          if !&yes
+            enddo
+        )
+        TASK.STacK.Init
+      )
+    )
+  )
+  popup "Trace"
+  (
+    popup "[:alist]List"
+    (
+      separator
+      menuitem "[:alist]&Task Switches"     "Trace.List List.TASK"
+      menuitem "[:alist]&Default and Tasks" "Trace.List List.TASK DEFault"
+    )
+  )
+  popup "Perf"
+  (
+    separator
+    popup "&Task Runtime"
+    (
+      menuitem "&Prepare"
+      (
+        if t.method.analyzer()
+        (
+          Analyzer.AutoInit on
+        )
+        if a.mode.flow()
+        (
+          Break.Delete /TraceEnable
+          Break.Set task.config(magic) /TraceEnable
+        )
+      )
+      menuitem "[:perf]Show &Numerical"   "Trace.STATistic.TASK"
+      menuitem "[:achart]Show as &Timing" "Trace.CHART.TASK"
+      menuitem "[:achart]Tracking with Trace &List"
+      (
+        Trace.List List.TASK DEFault /Track
+        Trace.CHART.TASK /Track
+      )
+    )
+    popup "Task &Function Runtime"
+    (
+      menuitem "&Prepare"
+      (
+        if t.method.analyzer()
+        (
+          Analyzer.AutoInit on
+          Analyzer.STATistic.PreFetch on
+        )
+        if a.mode.flow()
+        (
+          Break.Delete /TraceData
+          Break.Set task.config(magic) /TraceData
+        )
+      )
+      menuitem "[:perf]Show &Numerical"     "Trace.STATistic.TASKFUNC"
+      menuitem "[:perf]Show as &Tree"       "Trace.STATistic.TASKTREE"
+      menuitem "[:perf]Show &Detailed Tree" "Trace.STATistic.TASKTREE ALL"
+      menuitem "[:achart]Show as &Timing"   "Trace.CHART.TASKFUNC"
+      menuitem "[:alist]Show N&esting"      "Trace.List List.TASK FUNC TI.FUNC"
+    )
+  )
+  popup "&Help"
+  (
+    MENUITEM "[:manual]OS Awareness Manual LiteOS" "HELP __RTOS_LITEOS_"
+  )
+)
+
+menu "task.t"
+(
+  default
+  menuitem "[:var]Display task struct"
+  (
+    PRIVATE &pAddress &sType
+    &pAddress=TRACK.ADDRESS()
+    &sType=TASK.STRUCT("tcb")
+    Var.View %Open %String (&(sType)*)(&pAddress)
+  )
+  separator
+  menuitem "[:varframe]Display Stack Frame"
+  (
+    PRIVATE &nAddress
+    &nAddress=ADDRESS.OFFSET(TRACK.ADDRESS())
+    Var.Frame /Locals /Caller /Task &nAddress
+  )
+  menuitem "[:reg]Display Registers"
+  (
+    PRIVATE &nAddress
+    &nAddress=ADDRESS.OFFSET(TRACK.ADDRESS())
+    Register /Task &nAddress
+  )
+  menuitem "Switch Context"
+  (
+    PRIVATE &nAddress
+    &nAddress=ADDRESS.OFFSET(TRACK.ADDRESS())
+    Register.TASK &nAddress
+  )
+  separator
+  menuitem "Add to Stack Cov"
+  (
+    PRIVATE &nAddress
+    &nAddress=ADDRESS.OFFSET(TRACK.ADDRESS())
+    TASK.STacK.ADD &nAddress
+  )
+  menuitem "Rm from Stack Cov"
+  (
+    PRIVATE &nAddress
+    &nAddress=ADDRESS.OFFSET(TRACK.ADDRESS())
+    TASK.STacK.RM &nAddress
+  )
+  separator
+  menuitem "[:dump]Dump task entry"
+  (
+    PRIVATE &pAddress
+    &pAddress=TRACK.ADDRESS()
+    Data.dump &pAddress /Long /DIALOG
+  )
+)
+
+menu "task.m"
+(
+  default
+  menuitem "[:var]Display Mutex struct"
+  (
+    PRIVATE &pAddress &sType
+    &pAddress=TRACK.ADDRESS()
+    &sType=TASK.STRUCT("mutex")
+    Var.View %Open %String (&(sType)*)(&pAddress)
+  )
+  menuitem "[:dump]Dump Mutex Entry"
+  (
+    PRIVATE &pAddress
+    &pAddress=TRACK.ADDRESS()
+    Data.dump &pAddress /Long /DIALOG
+  )
+)
+
+menu "task.sem"
+(
+  default
+  menuitem "[:objects]Display Detailed"
+  (
+    PRIVATE &nAddress
+    &nAddress=ADDRESS.OFFSET(TRACK.ADDRESS())
+    TASK.SEMaphore &nAddress
+  )
+  menuitem "[:var]Display Semaphore struct"
+  (
+    PRIVATE &pAddress &sType
+    &pAddress=TRACK.ADDRESS()
+    &sType=TASK.STRUCT("semaphore")
+    Var.View %Open %String (&(sType)*)(&pAddress)
+  )
+  menuitem "[:dump]Dump Semaphore Entry"
+  (
+    PRIVATE &pAddress
+    &pAddress=TRACK.ADDRESS()
+    Data.dump &pAddress /Long /DIALOG
+  )
+)
+
+menu "task.que"
+(
+  default
+  menuitem "[:objects]Display Detailed"
+  (
+    PRIVATE &nAddress
+    &nAddress=ADDRESS.OFFSET(TRACK.ADDRESS())
+    TASK.Queue &nAddress
+  )
+  menuitem "[:var]Display Queue struct"
+  (
+    PRIVATE &pAddress &sType
+    &pAddress=TRACK.ADDRESS()
+    &sType=TASK.STRUCT("queue")
+    Var.View %Open %String (&(sType)*)(&pAddress)
+  )
+  menuitem "[:dump]Dump Queue Entry"
+  (
+    PRIVATE &pAddress
+    &pAddress=TRACK.ADDRESS()
+    Data.dump &pAddress /Long /DIALOG
+  )
+)
+
+menu "task.tim"
+(
+  default
+  menuitem "[:var]Display Timer Control struct"
+  (
+    PRIVATE &pAddress
+    &pAddress=TRACK.ADDRESS()
+    Var.View %Open %String (SWTMR_CTRL_S *)(&pAddress)
+  )
+  menuitem "[:dump]Dump Timer Entry"
+  (
+    PRIVATE &pAddress
+    &pAddress=TRACK.ADDRESS()
+    Data.dump &pAddress /Long /DIALOG
+  )
+)
+)

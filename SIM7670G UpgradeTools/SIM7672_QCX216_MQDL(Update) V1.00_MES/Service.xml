@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <UserName>PL018</UserName>
+  <PassWord>8(*+"</PassWord>
+  <Resources>
+  </Resources>
+  <DbServer>192.168.100.6</DbServer>
+  <FtpUrl>192.168.100.6</FtpUrl>
+  <FtpUser>administrator</FtpUser>
+  <FtpPwd>ABCabc123</FtpPwd>
+</Config>
+<!--UserName 用户名-->
+<!--PassWord 密码-->
+<!--Resources 资源代码 MES中的工序线体-->

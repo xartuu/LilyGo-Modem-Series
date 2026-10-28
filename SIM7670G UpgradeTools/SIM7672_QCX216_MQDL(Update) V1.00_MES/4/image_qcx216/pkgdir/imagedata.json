@@ -1,0 +1,36 @@
+{
+ "HashAlgorithm": "SHA256",
+ "imageinfo": [
+  {
+   "addr": 16384,
+   "file": "ap_bootloader.bin",
+   "flashsize": 131072,
+   "hash": "A32BAE5A8AA487B47B53D490D236FF493F8AA684C3B88BD79A420BF02E743B1E",
+   "type": "BL"
+  },
+  {
+   "addr": 147456,
+   "file": "ap_at_command.bin",
+   "flashsize": 2621440,
+   "hash": "997E3B27FB9C9BB197472FF4294084390D25605FC8C54BFB44DA325AEBAF57D1",
+   "type": "AP"
+  },
+  {
+   "addr": 0,
+   "file": "cp-demo-flash.bin",
+   "flashsize": 524288,
+   "hash": "F41DA357FAF4EF9B0CE52D1E64CE5A8125C027F25F96CDAE687982B812E3FFD7",
+   "type": "CP"
+  }
+ ],
+ "imagepath": "D:\\work\\Ңʔȭܾ\\҆оE7025\\tools\\QCX216\\FlashTools_V4.0.7\\FlashTools_V4.0.7\\image_qcx216\\pkgdir\\pkg_extract_tmp\\",
+ "ExtractSyncRec": {
+  "LastSyncTime": 1673343238,
+  "LastSyncStat": 1,
+  "PackagePath": "D:\\work\\测试软件\\移芯E7025\\tools\\QCX216\\FlashTools_V4.0.7\\FlashTools_V4.0.7\\image_qcx216\\pkgdir\\at_command.binpkg",
+  "PackageExtDir": "D:\\work\\测试软件\\移芯E7025\\tools\\QCX216\\FlashTools_V4.0.7\\FlashTools_V4.0.7\\image_qcx216\\pkgdir\\pkg_extract_tmp",
+  "PackageModTime": 1652930994,
+  "PackageSize": 2574686,
+  "PackageHash": "344452907a718b08ba42d97a350ecabb52b8a23e46a427f691b7fa9e7e15764b"
+ }
+}

@@ -1,0 +1,68 @@
+<config>
+	<Logger>
+		<LogPath/>
+		<NameRule>0</NameRule>
+		<MaxFilesizeInMB>50</MaxFilesizeInMB>
+		<MinFreeDiskSpace>5000</MinFreeDiskSpace>
+		<DiskFullOperation>0</DiskFullOperation>
+		<ShowRangeSelThreshSizeInMB>50</ShowRangeSelThreshSizeInMB>
+		<IsShowRangeSelNextTime>false</IsShowRangeSelNextTime>
+		<NumOfSecondsAgoForDelUnzippedLog>86400</NumOfSecondsAgoForDelUnzippedLog>
+		<UnzippedFolder></UnzippedFolder>
+		<ImportPath></ImportPath>
+		<IsShowSplitterNextTime>true</IsShowSplitterNextTime>
+		<RemoveOldestWhenDiskFull>true</RemoveOldestWhenDiskFull>
+	</Logger>
+	<Common>
+		<IsOnline>true</IsOnline>
+		<CommandServer>false</CommandServer>
+		<port>10565</port>
+		<DumpFileCount>50</DumpFileCount>
+	</Common>
+	<UniLogViewer>
+		<FontSize>16</FontSize>
+		<cachecsvlog>false</cachecsvlog>
+	</UniLogViewer>
+	<SigLogger>
+		<columnwidth>
+			<Index>10</Index>
+			<UETime>15</UETime>
+			<Message>51</Message>
+			<PCTime>15</PCTime>
+		</columnwidth>
+		<cachetxtlog>false</cachetxtlog>
+	</SigLogger>
+	<Communications>
+		<Device_0_Settings>
+			<Enabled>1</Enabled>
+			<ProtocolType>RawData</ProtocolType>
+			<CommunicationType>Serial</CommunicationType>
+			<DriverName>FTSER2K</DriverName>
+			<AutoDetect>0</AutoDetect>
+			<COMName>USB Serial Port</COMName>
+			<COMNumber>3</COMNumber>
+			<BaudRate>3000000</BaudRate>
+			<SavedCOMNames/>
+		</Device_0_Settings>
+		<Device_1_Settings>
+			<Enabled>0</Enabled>
+			<CommunicationType>Serial</CommunicationType>
+			<DriverName>FTSER2K</DriverName>
+			<COMName>USB Serial Port</COMName>
+			<COMNumber>4</COMNumber>
+			<BaudRate>3000000</BaudRate>
+			<ProtocolType>RawData</ProtocolType>
+		</Device_1_Settings>
+	</Communications>
+	<Workspace>
+		<TabbedView>
+			<Alignment>0</Alignment>
+			<Group0>
+				<Tab0 Name="UniLogViewer">false</Tab0>
+				<Tab1 Name="SigLogger">false</Tab1>
+			</Group0>
+		</TabbedView>
+		<DockablePane>false</DockablePane>
+	</Workspace>
+</config>
+

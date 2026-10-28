@@ -1,0 +1,5 @@
+::Generating ramlog out of a RUMDUMP file - By Michael Tadmor Nov 2010
+
+:: Note - run this script only from your T32 application folder
+
+echo %~dp1> t32SimulatorArgs.tmp

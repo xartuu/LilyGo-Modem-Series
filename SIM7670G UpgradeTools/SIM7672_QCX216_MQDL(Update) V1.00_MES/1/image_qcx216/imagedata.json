@@ -1,0 +1,36 @@
+{
+ "HashAlgorithm": "SHA256",
+ "imageinfo": [
+  {
+   "addr": 16384,
+   "file": "ap_bootloader.bin",
+   "flashsize": 131072,
+   "hash": "8A059C4B2DEA4AA4756457EA084D4D4D6B1DD8752244F1B0C820A8150A792E61",
+   "type": "BL"
+  },
+  {
+   "addr": 147456,
+   "file": "ap_at_command.bin",
+   "flashsize": 2621440,
+   "hash": "EB6F80D9E6E8A03EF71402BEB875D05AC5B959A07C86506B4B33F134FC522775",
+   "type": "AP"
+  },
+  {
+   "addr": 0,
+   "file": "cp-demo-flash.bin",
+   "flashsize": 524288,
+   "hash": "6EA3759AA582FFDEA136C7DE52E89F665102D515572E3079FF0E455E981010E0",
+   "type": "CP"
+  }
+ ],
+ "imagepath": "C:\\Dropbox\\venkat sai\\Tools\\FlashTools_V4.0.7_QCom_20220523\\image_qcx216\\pkg_extract_tmp\\",
+ "ExtractSyncRec": {
+  "LastSyncTime": 1666006820,
+  "LastSyncStat": 1,
+  "PackagePath": "C:\\Dropbox\\venkat sai\\Tools\\FlashTools_V4.0.7_QCom_20220523\\image_qcx216\\at_command.binpkg",
+  "PackageExtDir": "C:\\Dropbox\\venkat sai\\Tools\\FlashTools_V4.0.7_QCom_20220523\\image_qcx216\\pkg_extract_tmp",
+  "PackageModTime": 1663307845,
+  "PackageSize": 3048586,
+  "PackageHash": "5dc1713ba49e3d6a1b88e51d871376d59a5bf054925c96f17658d805cbc9cf11"
+ }
+}
